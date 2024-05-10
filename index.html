@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Главная страница</title>
+
+ <style>
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h3 {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+/* Анимации */
+
+/* Анимация появления изображения */
+.container img {
+  animation: fadein 1s ease-in-out;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Анимация появления формы */
+form {
+  animation: slidein 1s ease-in-out;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Анимация появления заголовка */
+h3 {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Анимация появления подзаголовка */
+h4 {
+  animation: fadein 1s ease-in-out;
+}
+
+/* Анимация появления полей формы */
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
+  animation: fadein 1s ease-in-out;
+}
+
+/* Анимация появления кнопки */
+button {
+  animation: fadein 1s ease-in-out;
+}
+
+/* Дополнительные анимации */
+
+/* Анимация пульсации для кнопки */
+button {
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Анимация всплытия для элементов опроса */
+input[type="checkbox"], input[type="radio"] {
+  animation: pop-up 1s ease-in-out;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ </style>
+</head>
+<body>
+
+<div class="container">
+
+<center><img src="https://virtus-img.cdnvideo.ru/images/as-is/plain/12/12d1a32d-e015-47a9-988f-b8bccf38d55f.png@jpg" alt="" width=500></center>
+
+<form onsubmit="return validateForm()">
+  <input type="text" name="name" id="name" placeholder="Имя" ><br>
+  <input type="tel" name="number" id="number" placeholder="Телефон" ><br>
+  <input type="email" name="email" id="email" placeholder="Почта" ><br>
+  <input type="password" name="password" id="password" placeholder="Пароль" >
+  <br>
+  <button type="submit">Готово</button>
+</form>
+<br>
+<h4>
+КАК НАЗЫВАЮТ ФРУКТ ЯБЛОКО ЕСЛИ ЕГО РАЗРЕЖУТ НА АНАНАС?
+</h4>
+<br>
+<h4>
+1<input type="checkbox">Яблоко <br>
+2<input type="checkbox">АНАНАС <br>
+3<input type="checkbox">Баннана <br>
+<br>
+Что такое сосисоны?
+<br>
+1<input type="radio" name="radio">Огурчик <br>
+2<input type="radio" name="radio">Сельдирей <br>
+3<input type="radio" name="radio">Имбирь <br>
+</h4>
+
+</div>
+
+<script>
+// Проверка заполнения полей формы
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var number = document.getElementById("number").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  if (name == "" || number == "" || email == "" || password == "") {
+    alert("Пожалуйста, заполните все поля формы.");
+    return false;
+  }
+
+  return true;
+}
+</script>
+
+</body>
+</html>
